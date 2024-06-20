@@ -1,5 +1,4 @@
 .customer{
-    display: grid;
-    grid-template-rows: auto auto auto;
+    display: flex;
 
 }

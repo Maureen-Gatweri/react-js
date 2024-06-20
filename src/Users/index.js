@@ -1,12 +1,13 @@
 import {useGetUsers} from './hooks/userGetUsers';
 import UserCard from '../Atoms/UserCard';
+import './index.css'
 
 const Users=()=>{
     const{users,loading,error}=useGetUsers();
     console.log('users...',users);
     
     return(
-        <div>
+        <div className='users'>
             {loading && <h2> Loading users...</h2>}
             {users.length > 0 && !loading
             ? users.map((user) => (
