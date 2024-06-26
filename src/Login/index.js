@@ -1,6 +1,8 @@
 import './index.css';
 import { useState } from "react";
 import { login } from './utils';
+import React from 'react';
+import{ Link} from 'react-router-dom';
 
 const Login=()=>{   
         const[userName,setUserName]=useState("");
@@ -25,7 +27,9 @@ const Login=()=>{
             <input placeholder=" Enter password" type="password" onChange={(e)=>setPassword(e.target.value)}/>
 
             <br/>
-            <button type="submit">Login </button>
+            <Link to = "/Users">
+                <button type="submit">Login </button>
+            </Link>
         </form>
     );
 };
